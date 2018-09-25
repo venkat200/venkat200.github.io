@@ -1,0 +1,45 @@
+---
+layout: not_homepage
+quote: 
+author: 
+---
+
+{% include quote.html quote=page.quote author=page.author %}
+
+<div class="container about_section">
+  <div class="row">
+    <img src="/assets/images/profile_picture.jpeg" class="col m2 s3 responsive circle about_img" alt="me">
+    <div class="about_paragraph">
+      <p>Hi !!! <\ I am VENKAT >, <br>Ungergradute Student from Computer Science Department in IIITDM Kancheepuram.I am from chennai.I completed my 11th and 12th Grade in Chennai Public School.
+      I have keen interest in the field of Computer Science and Aerospace.</p>
+
+      <p>I am an learning enthusiast who is trying to learn new cool stuff.<br>Currently,I am a Web Developer in Digital Media Team, IIITDM Kancheepuram. Languages I know and I am currently using in projects are as follows ,
+      </p>
+    </div>
+  </div>
+  
+
+  <div class="skills_wrapper">
+      {% for tech_group in site.data.skills %}
+        <div class="skill_group">
+          <div class="col m4 s6">
+            <h4 class="heading">{{tech_group.name}}:</h4>
+            <div class="skills">
+              {% for tech in tech_group.skills %}
+              <i class="about_skill_icon devicon-{{tech.class}}"></i><span class="skill_names">{{tech.skill_name}}</span><br/>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+  </div>
+
+
+  <div class="row">
+    <div class="about_paragraph">
+      <p>I am huge fan of Marvel Cinematic Universe, James Bond Series of movies and many regional movies of Sci-fi, Spy-Thriller and Comedy domain.I love playing games like Resident Evil and Transformers. </p>
+    </div>
+  </div>
+
+
+</div>
